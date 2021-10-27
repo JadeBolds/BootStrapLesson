@@ -1,0 +1,90 @@
+//background color
+$bondiBlue: #05A1B6;
+
+// 
+$blackPearl: #040920;
+
+// background color
+$anakiwa: #9CE3FA;
+
+// navBar
+$deepSeaGreen: #0A4D54;
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 30px;
+}
+
+.section{
+    margin-bottom: 8rem;
+}
+
+.main-background{
+    height: 90vh;
+
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($bondiBlue, 0.6),
+        rgba($deepSeaGreen, 0.4)),
+        url(../images/roboHand.jpg);
+        background-size: cover;
+}
+
+.text-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.heading-primary{
+    color:#9CE3FA;
+    text-transform: capitalize;
+
+    animation-name: leftSlide;
+    animation-duration: 3s;
+}
+
+.heading-primary--main{
+    display: block;
+    font-size: 60px;
+    font-weight:400;
+    letter-spacing: 35px;
+}
+
+@keyframes leftSlide {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    100%{
+        opacity: 1;
+        transform: translate(0)
+    }
+}
+
+//--------------------------About-----------------------------------
+
+
+//-----------------------zresume-----------------------------
+
+
+//-------------------------Contact --------------------------------------
+.footer {
+    padding: 1.5rem;
+    background-color: $bondiBlue;
+}
+
+.contact-text{
+    text-align: center;
+    color: $deepSeaGreen;
+}

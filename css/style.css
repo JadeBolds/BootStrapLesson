@@ -1,0 +1,108 @@
+html {
+  scroll-behavior: smooth; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  padding: 30px; }
+
+.section {
+  margin-bottom: 8rem; }
+
+.main-background {
+  height: 90vh;
+  background-image: linear-gradient(to right bottom, rgba(5, 161, 182, 0.6), rgba(10, 77, 84, 0.4)), url(../images/roboHand.jpg);
+  background-size: cover; }
+
+.text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.heading-primary {
+  color: #9CE3FA;
+  text-transform: capitalize;
+  animation-name: leftSlide;
+  animation-duration: 3s; }
+
+.heading-primary--main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px; }
+
+@keyframes leftSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.footer {
+  padding: 1.5rem;
+  background-color: #05A1B6; }
+
+.contact-text {
+  text-align: center;
+  color: #0A4D54; }
+.about-text{
+    height:75vh;
+    text-align:center;
+    color: #0A4D54;
+}
+.feature-box{
+    margin-top: 3rem;
+    transition: transform .3s;
+}
+.feature-box:hover {
+    transform:translateY(-1.5rem) scale(1.03);
+}
+.experience-jumbo{
+    height:75vh;
+}
+.experience-header{
+    color:rgba(10, 77, 84, 0.4);
+    text-align: center;
+}
+.ecard{
+perspective: 150rem;
+position:relative;
+text-align: center;
+    color: #05A1B6;
+    height:30rem;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    border-radius:3px;
+    box-shadow: 0 1.5rem 4rem rbga(0,0,0,0.15);
+    transition: all 08s ease;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+.ecard__side--front{
+    background-color: #05A1B6;
+}
+.ecard__side--back{
+    background-image: linear-gradient(to right bottom, #05A1B6, #05A1B6);
+}
+.ecard__picture{
+     background-size: cover;
+    height: 13rem;
+    -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.ecard:hover .ecard__side--front{
+    transform: rotateY(-180deg)
+}
+.ecard:hover .ecard__side--back{
+    transform: rotateY(0deg)
+}
+.ecard__picture--1{
+    background-image: linear-gradient(to right bottom, rgba(5, 161, 182, 0.6), rgba(10, 77, 84, 0.4)), url(../images/roboHand.jpg);
+}
