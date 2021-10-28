@@ -10,6 +10,11 @@ $anakiwa: #9CE3FA;
 // navBar
 $deepSeaGreen: #0A4D54;
 
+$navyBlue:#05445E;
+$blueGrotto:#189AB4;
+$blueGreen:#75E6DA;
+$whiteBlue:#D4F1F4;
+
 html{
     scroll-behavior: smooth;
 }
@@ -74,9 +79,119 @@ body{
 
 //--------------------------About-----------------------------------
 
+.about-jumbo {
+	background-color: $deepSeaGreen;
+}
+
+.about-text {
+	height: 75vh;
+	text-align: center;
+	color: $anakiwa;
+}
+
+.feature-box {
+	margin-top: 3rem;
+	transition: transform .3s;
+
+	&:hover {
+		transform: translateY(-1.5rem) scale(1.03);
+	}
+}
 
 //-----------------------zresume-----------------------------
 
+.experience-jumbo {
+	background-color: $bondiBlue;
+	height: 75vh;
+}
+
+.experience-header {
+	color: $yellow;
+	text-align: center;
+}
+
+.e-card {
+	/* the lower the value, the more dramatic the perspective */
+	perspective: 150rem;
+	position: relative;
+	height: 30rem;
+
+	&__side {
+		text-align: center;
+		color: $dark-blue;
+		height: 30rem;
+		transition: all .8s ease;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		backface-visibility: hidden;
+		border-radius: 3px;
+		overflow: hidden;
+		box-shadow: 0 1.5rem 4rem rgba(black, .15);
+
+		&--front {
+			background-color: $bondiBlue;
+		}
+
+		&--back {
+			background-image: linear-gradient(to right bottom, $swirl, $yellow);
+			transform: rotateY(180deg);
+		}
+	}
+
+	&:hover &__side--front {
+		transform: rotateY(-180deg);
+		
+	}
+
+	&:hover &__side--back {
+		transform: rotateY(0);
+	}
+
+	&__picture {
+		background-size: cover;
+		height: 13rem;
+		background-blend-mode: screen;
+		-webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+		
+		&--1 {
+			background-image: linear-gradient(
+			to right bottom, 
+			rgba($swirl, 0.8), 
+			rgba($scorpion, 0.8)), 
+			url(../img/james-harrison.jpg);
+		}
+		&--2 {
+			background-image: linear-gradient(
+			to right bottom, 
+			rgba($swirl, 0.8), 
+			rgba($scorpion, 0.8)), 
+			url(../img/floriane.jpg);
+		}
+		&--3 {
+			background-image: linear-gradient(
+			to right bottom, 
+			rgba($swirl, 0.8), 
+			rgba($scorpion, 0.8)), 
+			url(../img/cookie.jpg);
+		}
+	}
+
+	&__details {
+		margin-top: 2rem;
+	}
+
+	&__cta {
+		position: absolute;
+		margin-top: 7rem;
+		font-size: 1.5rem;
+		padding: 0 1rem 0 1rem;
+		font-weight: 100;
+	}
+
+}
 
 //-------------------------Contact --------------------------------------
 .footer {
@@ -87,4 +202,11 @@ body{
 .contact-text{
     text-align: center;
     color: $deepSeaGreen;
+}
+.form-label {
+	color: $scorpion;
+}
+  
+.top-button {
+	text-decoration: none;
 }

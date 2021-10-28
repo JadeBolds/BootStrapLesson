@@ -15,7 +15,9 @@ body {
 .main-background {
   height: 90vh;
   background-image: linear-gradient(to right bottom, rgba(5, 161, 182, 0.6), rgba(10, 77, 84, 0.4)), url(../images/roboHand.jpg);
-  background-size: cover; }
+  background-size: cover;
+  background-position: top;
+}
 
 .text-box {
   position: absolute;
@@ -27,12 +29,12 @@ body {
   color: #9CE3FA;
   text-transform: capitalize;
   animation-name: leftSlide;
-  animation-duration: 3s; }
+  animation-duration: 4s; }
 
 .heading-primary--main {
   display: block;
   font-size: 60px;
-  font-weight: 400;
+  font-weight: 600;
   letter-spacing: 35px; }
 
 @keyframes leftSlide {
@@ -50,6 +52,10 @@ body {
 .contact-text {
   text-align: center;
   color: #0A4D54; }
+  
+.about-jumbo {
+    background-color: #221F20; }
+
 .about-text{
     height:75vh;
     text-align:center;
@@ -63,6 +69,7 @@ body {
     transform:translateY(-1.5rem) scale(1.03);
 }
 .experience-jumbo{
+    background-color: #05445E;
     height:75vh;
 }
 .experience-header{
@@ -85,24 +92,48 @@ text-align: center;
     backface-visibility: hidden;
     overflow: hidden;
 }
+.e-card__side {
+    text-align: center;
+    color: #333652;
+    height: 30rem;
+    transition: all .8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
 .ecard__side--front{
     background-color: #05A1B6;
 }
 .ecard__side--back{
     background-image: linear-gradient(to right bottom, #05A1B6, #05A1B6);
+    transform: rotateY(180deg);
 }
-.ecard__picture{
-     background-size: cover;
-    height: 13rem;
-    -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-}
+
 .ecard:hover .ecard__side--front{
     transform: rotateY(-180deg)
 }
 .ecard:hover .ecard__side--back{
     transform: rotateY(0deg)
 }
+.ecard__picture{
+    background-size: cover;
+   height: 13rem;
+   background-blend-mode: screen;
+   -webkit-clip-path:polygon(0 0, 100% 0, 100% 85%, 0 100%);
+   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
 .ecard__picture--1{
     background-image: linear-gradient(to right bottom, rgba(5, 161, 182, 0.6), rgba(10, 77, 84, 0.4)), url(../images/roboHand.jpg);
 }
+.e-card__details {
+    margin-top: 2rem; }
+  .e-card__cta {
+    position: absolute;
+    margin-top: 7rem;
+    font-size: 1.5rem;
+    padding: 0 1rem 0 1rem;
+    font-weight: 100; }
